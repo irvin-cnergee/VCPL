@@ -1,0 +1,2 @@
+include ':app', ':residemenu', ':floatinglabellib', ':wheeldemo', ':ebs'
+//rootProject.name='Jolly Broadband'

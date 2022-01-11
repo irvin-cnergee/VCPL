@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/JYOTI WORKSPACE/CMAYA/ANDROID APPLICATION/VCPL/app/src/main/res/layout/activity_chat.xml" value="0.2609375" />
+        <entry key="..\:/JYOTI WORKSPACE/CMAYA/ANDROID APPLICATION/VCPL/app/src/main/res/layout/activity_checkimage.xml" value="0.2609375" />
+        <entry key="..\:/JYOTI WORKSPACE/CMAYA/ANDROID APPLICATION/VCPL/app/src/main/res/layout/activity_ebs.xml" value="0.2609375" />
+        <entry key="..\:/JYOTI WORKSPACE/CMAYA/ANDROID APPLICATION/VCPL/app/src/main/res/layout/activity_error_page.xml" value="0.2609375" />
+        <entry key="..\:/JYOTI WORKSPACE/CMAYA/ANDROID APPLICATION/VCPL/app/src/main/res/layout/activity_help.xml" value="0.22871376811594202" />
+        <entry key="..\:/JYOTI WORKSPACE/CMAYA/ANDROID APPLICATION/VCPL/app/src/main/res/layout/activity_id_card.xml" value="0.2609375" />
+        <entry key="..\:/JYOTI WORKSPACE/CMAYA/ANDROID APPLICATION/VCPL/app/src/main/res/layout/activity_main.xml" value="0.2558876811594203" />
+        <entry key="..\:/JYOTI WORKSPACE/CMAYA/ANDROID APPLICATION/VCPL/app/src/main/res/layout/activity_make_my_payment__pay_tm.xml" value="0.2609375" />
+        <entry key="..\:/JYOTI WORKSPACE/CMAYA/ANDROID APPLICATION/VCPL/app/src/main/res/layout/activity_make_my_payment__pay_u.xml" value="0.2609375" />
+        <entry key="..\:/JYOTI WORKSPACE/CMAYA/ANDROID APPLICATION/VCPL/app/src/main/res/layout/activity_make_payment__pay_umoney.xml" value="0.2609375" />
+        <entry key="..\:/JYOTI WORKSPACE/CMAYA/ANDROID APPLICATION/VCPL/app/src/main/res/layout/activity_make_payumoney.xml" value="0.2609375" />
+        <entry key="..\:/JYOTI WORKSPACE/CMAYA/ANDROID APPLICATION/VCPL/app/src/main/res/layout/activity_notification_list.xml" value="0.2609375" />
+        <entry key="..\:/JYOTI WORKSPACE/CMAYA/ANDROID APPLICATION/VCPL/app/src/main/res/layout/activity_package_details.xml" value="0.2609375" />
+        <entry key="..\:/JYOTI WORKSPACE/CMAYA/ANDROID APPLICATION/VCPL/app/src/main/res/layout/activity_packgedetail.xml" value="0.2609375" />
+        <entry key="..\:/JYOTI WORKSPACE/CMAYA/ANDROID APPLICATION/VCPL/app/src/main/res/layout/activity_payment_list.xml" value="0.2609375" />
+        <entry key="..\:/JYOTI WORKSPACE/CMAYA/ANDROID APPLICATION/VCPL/app/src/main/res/layout/activity_payment_success.xml" value="0.24909420289855072" />
+        <entry key="..\:/JYOTI WORKSPACE/CMAYA/ANDROID APPLICATION/VCPL/app/src/main/res/layout/activity_plan_calculator.xml" value="0.12689969604863222" />
+        <entry key="..\:/JYOTI WORKSPACE/CMAYA/ANDROID APPLICATION/VCPL/app/src/main/res/layout/activity_refer_frnd.xml" value="0.2558876811594203" />
+        <entry key="..\:/JYOTI WORKSPACE/CMAYA/ANDROID APPLICATION/VCPL/app/src/main/res/layout/activity_sms.xml" value="0.2558876811594203" />
+        <entry key="..\:/JYOTI WORKSPACE/CMAYA/ANDROID APPLICATION/VCPL/app/src/main/res/layout/changepackage.xml" value="0.1" />
+        <entry key="..\:/JYOTI WORKSPACE/CMAYA/ANDROID APPLICATION/VCPL/app/src/main/res/layout/confirmation.xml" value="0.2558876811594203" />
+        <entry key="..\:/JYOTI WORKSPACE/CMAYA/ANDROID APPLICATION/VCPL/app/src/main/res/layout/fragment_data_usage.xml" value="0.2609375" />
+        <entry key="..\:/JYOTI WORKSPACE/CMAYA/ANDROID APPLICATION/VCPL/app/src/main/res/layout/fragment_existing.xml" value="0.2558876811594203" />
+        <entry key="..\:/JYOTI WORKSPACE/CMAYA/ANDROID APPLICATION/VCPL/app/src/main/res/layout/login_fragment_activity.xml" value="0.2558876811594203" />
+        <entry key="..\:/JYOTI WORKSPACE/CMAYA/ANDROID APPLICATION/VCPL/app/src/main/res/layout/makemypayments.xml" value="0.2609375" />
+        <entry key="..\:/JYOTI WORKSPACE/CMAYA/ANDROID APPLICATION/VCPL/app/src/main/res/layout/new_myapp_datausage.xml" value="0.2558876811594203" />
+        <entry key="..\:/JYOTI WORKSPACE/CMAYA/ANDROID APPLICATION/VCPL/app/src/main/res/layout/newchangepackage.xml" value="0.2558876811594203" />
+        <entry key="..\:/JYOTI WORKSPACE/CMAYA/ANDROID APPLICATION/VCPL/app/src/main/res/layout/self_resolution.xml" value="0.2558876811594203" />
+        <entry key="..\:/JYOTI WORKSPACE/CMAYA/ANDROID APPLICATION/VCPL/app/src/main/res/layout/test_myapp_home.xml" value="0.2609375" />
+        <entry key="..\:/JYOTI WORKSPACE/CMAYA/ANDROID APPLICATION/VCPL/app/src/main/res/layout/transresponse.xml" value="0.12689969604863222" />
+        <entry key="..\:/JYOTI WORKSPACE/CMAYA/ANDROID APPLICATION/VCPL/app/src/main/res/layout/webview_screen.xml" value="0.2609375" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

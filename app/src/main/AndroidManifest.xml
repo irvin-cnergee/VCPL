@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.cnergee.myapp.instanet">
+
+    <uses-sdk tools:overrideLibrary="it.sephiroth.android.library.imagezoom" />
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
+    <application
+        android:name="com.cnergee.mypage.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/logo"
+        android:theme="@style/NoActionBar"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:icon, android:label, android:theme, android:name,android:allowBackup,android:usesCleartextTraffic">
+        <activity android:name="com.cnergee.mypage.MakePayment_PayUMoneyActivity"
+           />
+        <activity
+            android:name="com.cnergee.mypage.MakeMyPayment_PayU"
+            android:screenOrientation="portrait" /> <!-- <service android:name="com.cnergee.mypage.fcm_notification.MyAndroidFirebaseMsgService"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.google.firebase.MESSAGING_EVENT" /> -->
+        <!-- </intent-filter> -->
+        <!-- </service> -->
+        <!-- <service android:name="com.cnergee.mypage.fcm_notification.MyAndroidFirebaseInstanceIdService"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.google.firebase.INSTANCE_ID_EVENT" /> -->
+        <!-- </intent-filter> -->
+        <!-- </service> -->
+        <!-- <meta-data -->
+        <!-- android:name="com.google.android.gms.version" -->
+        <!-- android:value="@integer/google_play_services_version" /> -->
+        <service
+            android:name="com.cnergee.mypage.fcm_notification.MyAndroidFirebaseMsgService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/logo" />
+        <!--
+ Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/white" />
+
+        <activity
+            android:name="com.cnergee.mypage.MainActivity"
+            android:label="@string/app_name"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--
+        <activity
+            android:name="com.cnergee.mypage.Login"
+            android:screenOrientation="portrait" >
+        </activity>
+        -->
+        <activity
+            android:name="com.cnergee.mypage.LoginFragmentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cnergee.mypage.SMSAuthenticationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cnergee.mypage.MakeMyPaymentsAtom"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cnergee.mypage.WebView_PayTmActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cnergee.mypage.MakeMyPayment_Atom"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cnergee.mypage.MakeMyPayment_PayTmActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cnergee.mypage.PackgedetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cnergee.mypage.ChangePackage_NewActivity"
+            android:screenOrientation="portrait" />
+        <!--
+    <activity
+            android:name="com.paytm.pgsdk.PaytmPGActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard"
+            android:screenOrientation="portrait" />
+        -->
+        <activity
+            android:name="com.cnergee.mypage.WebView_AtomPayments"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cnergee.mypage.TransResponseAtom"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cnergee.mypage.Profile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cnergee.mypage.Authentication"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cnergee.mypage.Confirmation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cnergee.mypage.IONHome"
+            android:screenOrientation="portrait"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.package.ACTION_LOGOUT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cnergee.mypage.RenewPackage"
+            android:screenOrientation="portrait" />
+        <!--
+        <activity
+            android:name="com.cnergee.mypage.PymentPickupRequest"
+            android:screenOrientation="portrait" >
+        </activity>
+        -->
+        <activity
+            android:name="com.cnergee.mypage.MyappDataUsage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cnergee.mypage.PlanCalculatorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cnergee.mypage.MakeMyPayment_EBS"
+            android:screenOrientation="portrait" />
+        <!--
+              <activity
+            android:name="com.cnergee.mypage.DataUsage"
+            android:screenOrientation="portrait"
+            ></activity>
+        -->
+        <activity
+            android:name="com.cnergee.mypage.PaymentSuccessActivity"
+            android:screenOrientation="portrait"
+            android:exported="true">
+            <intent-filter>
+                <data
+                    android:host="@string/hostname"
+                    android:scheme="com.cnergee.myapp.vcpl"
+                    tools:ignore="AppLinkUrlError" />
+
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cnergee.mypage.PaymentHistory"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cnergee.mypage.ChangePackage"
+            android:screenOrientation="portrait" />
+        <!--
+ <activity
+            android:name="com.cnergee.mypage.NewChangePackage"
+            android:screenOrientation="portrait"></activity>
+        -->
+        <activity
+            android:name="com.cnergee.mypage.MakeMyPayments"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cnergee.mypage.Complaints"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.cnergee.mypage.SelfResolution"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.cnergee.mypage.SendImage"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name="com.cnergee.mypage.sys.MyPageService"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:permission="android.permission.INTERNET"
+            android:screenOrientation="portrait" />
+        <service
+            android:name="com.cnergee.mypage.sys.CheckExpiryService"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:permission="android.permission.INTERNET"
+            android:screenOrientation="portrait" />
+        <service
+            android:name="com.cnergee.mypage.sys.ServerCommunicationService"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:permission="android.permission.INTERNET"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.cnergee.mypage.NotificationListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cnergee.mypage.TransResponse"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cnergee.mypage.Help"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cnergee.mypage.HelpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cnergee.mypage.WebViewScreen"
+            android:screenOrientation="portrait" />
+        <!--
+        <activity
+            android:name="com.cnergee.mypage.ResetPwdActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        -->
+        <activity
+            android:name="com.cnergee.mypage.SpecialOfferActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cnergee.mypage.SpecialOfferWebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cnergee.mypage.PaymentPickup_New"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.cnergee.mypage.UpdateProfile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cnergee.mypage.ChatActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cnergee.mypage.ShowImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cnergee.mypage.ShowVideoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cnergee.mypage.TopupActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cnergee.mypage.MakeMyPaymentsTopUp"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cnergee.mypage.Refer_FrndActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cnergee.mypage.IdCardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cnergee.mypage.History_Data_FragmentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cnergee.mypage.MakeMyPayments_CCAvenue"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cnergee.mypage.PaymentOptionSelection_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cnergee.mypage.WebView_CCAvenueActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cnergee.mypage.TransResponseCCAvenue"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cnergee.mypage.MyAppHome"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cnergee.mypage.MakeMyPaymentsTopUp_CCAvenue"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cnergee.mypage.WebView_CCAvenue_TopUpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cnergee.mypage.Make_my_plan_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cnergee.mypage.PGSMS_Webview_Activity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.cnergee.mypage.WebView_PayUMoneyActivity"
+            android:screenOrientation="portrait" />
+
+
+        <uses-library
+            android:name="android.test.runner"
+            android:required="true" />
+
+        <receiver
+            android:name="com.cnergee.mypage.sys.AlarmBroadcastReceiver"
+            android:enabled="true" />
+        <receiver
+            android:name="com.cnergee.mypage.sys.AlarmBroadcastReceiver1"
+            android:enabled="true" />
+        <receiver
+            android:name="com.cnergee.mypage.sys.ExpiryBroadcastReceiver"
+            android:enabled="true" />
+        <receiver
+            android:name="com.cnergee.mypage.sys.BootBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+            </intent-filter>
+        </receiver>
+<!--        <receiver-->
+<!--            android:name="com.cnergee.mypage.sys.GcmBroadcastReceiver"-->
+<!--            >-->
+<!--            <intent-filter>-->
+<!--                <action android:name="com.google.android.c2dm.intent.RECEIVE" />-->
+
+<!--                <category android:name="com.hmkcode.android.gcm" />-->
+<!--            </intent-filter>-->
+<!--        </receiver>-->
+
+<!--        <service android:name="com.cnergee.mypage.sys.GcmMessageHandler" />-->
+<!--        <service-->
+<!--            android:name="com.cnergee.mypage.sys.CheckChatResponse"-->
+<!--            android:configChanges="keyboardHidden|orientation"-->
+<!--            android:label="@string/app_name"-->
+<!--            android:permission="android.permission.INTERNET"-->
+<!--            android:screenOrientation="portrait" />-->
+    </application>
+
+</manifest>
+

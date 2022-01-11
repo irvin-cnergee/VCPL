@@ -1,0 +1,127 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+}
+
+android {
+    compileSdk 30
+
+    defaultConfig {
+
+        applicationId "com.cnergee.myapp.instanet"
+        minSdk 19
+        targetSdk 30
+        versionCode 1
+        versionName "6.1"
+                multiDexEnabled true
+                testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+            }
+
+        //    dexOptions {
+        //        javaMaxHeapSize "4g"
+        //        preDexLibraries = false
+        //    }
+            configurations {
+                all*.exclude group: 'com.android.volley'
+            }
+            compileOptions {
+                sourceCompatibility JavaVersion.VERSION_1_8
+                targetCompatibility JavaVersion.VERSION_1_8
+            }
+            productFlavors {
+
+            }
+            packagingOptions {
+                exclude 'META-INF/DEPENDENCIES'
+            }
+            buildTypes {
+                release {
+                    minifyEnabled false
+                    multiDexKeepFile file('multidex-config.txt')
+                    proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+                }
+            }
+            lintOptions {
+                checkReleaseBuilds false
+                // Or, if you prefer, you can continue to check for errors in release builds,
+                // but continue the build even when errors are found:
+                abortOnError false
+            }
+
+
+        }
+
+
+        configurations {
+            all*.exclude group: 'com.android.support', module: 'support-v4'
+
+        }
+
+
+        dependencies {
+            implementation fileTree(dir: 'libs', include: ['*.jar'])
+            implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+
+
+
+            testImplementation 'junit:junit:4.12'
+            implementation 'androidx.appcompat:appcompat:1.1.0'
+            androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+            androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+            implementation files('libs/ksoap2-android-assembly-3.0.0-RC.4-jar-with-dependencies.jar')
+            implementation files('libs/traction-ashok-v1.jar')
+            implementation files('libs/otto-1.3.5.jar')
+            implementation files('libs/commons-net-3.3.jar')
+
+            implementation files('libs/org.apache.http.legacy.jar')
+            implementation files('libs/ftp4j-1.7.2.jar')
+            implementation project(':floatinglabellib')
+            // compile files('libs/android-async-http-1.4.4.jar')
+            implementation project(':residemenu')
+            implementation project(':wheeldemo')
+            implementation project(':ebs')
+
+
+        //    implementation 'com.payumoney.sdkui:plug-n-play:1.6.0'
+
+            implementation 'com.android.support:appcompat-v7:30.0.0'
+            implementation 'it.sephiroth.android.library.imagezoom:imagezoom:+'
+            //noinspection GradleCompatible
+        //    implementation 'com.google.android.gms:play-services-gcm:10.2.1'
+        //    implementation 'com.google.firebase:firebase-messaging:10.2.1'
+            implementation platform('com.google.firebase:firebase-bom:28.3.0')
+            implementation "com.google.android.gms:play-services-gcm:17.0.0"
+            implementation "com.google.firebase:firebase-messaging:22.0.0"
+
+        //    implementation 'com.google.firebase:firebase-messaging'
+            implementation 'com.google.firebase:firebase-analytics'
+
+            implementation 'com.android.support:cardview-v7:30.0.0'
+            // implementation files('libs/PGSDK_V2.0.jar')
+            implementation files('libs/picasso-2.2.0.jar')
+            implementation 'com.android.support:multidex:2.0.1'
+            implementation 'androidx.annotation:annotation:1.1.0'
+            implementation group: 'com.nineoldandroids', name: 'library', version: '2.4.0'
+
+        //    implementation 'com.paytm.appinvokesdk:appinvokesdk:0.6-TEST'
+            //implementation 'com.paytm.appinvokesdk:appinvokesdk:0.6'
+
+
+            implementation('com.google.android.ads.consent:consent-library:1.0.4') {
+                transitive = true
+                exclude group: "com.android.support"
+            }
+        //    implementation 'org.jetbrains:annotations:15.0'
+            subprojects {
+                project.configurations.all {
+                    resolutionStrategy.eachDependency { details ->
+                        if (details.requested.group == 'com.android.support'
+                                && !details.requested.name.contains('multidex')) {
+                            details.useVersion "30.0.0"
+                        }
+                    }
+                }
+            }
+
+        }
